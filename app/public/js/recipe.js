@@ -1,7 +1,7 @@
 $("#recipe-submit").on("click", function (event) {
     event.preventDefault();
 
-    // Make a newChirp object
+    // Make a newRecipe object
     var newRecipe = {
         title: $("#recipe-title").val().trim(),
         ingredients: $("#ingredients-list").val().trim(),

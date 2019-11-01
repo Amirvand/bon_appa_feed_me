@@ -5,7 +5,7 @@ USE recipeDB;
 CREATE TABLE recipes (
     id INT AUTO_INCREMENT NOT NULL,
     title VARCHAR(100) NOT NULL,
-    ingredients VARCHAR(1000) NOT NULL,
+    ingredients JSON NOT NULL,
     body VARCHAR(1000) NOT NULL,
     PRIMARY KEY (id)
 );

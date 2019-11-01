@@ -1,16 +1,9 @@
-// Function for zestful
-function parseIngredients() {
-    // API URL
-    var queryURL = "https://zestful.p.rapidapi.com/parseIngredients";
-    var ingredientsRaw = [
-        "½ tsp brown sugar",
-        "1 cup whole wheat flour"
-    ];
+const axios = require("axios");
 
-    // Requesting data from webcam.travel API
-    $.ajax({
-        url: queryURL,
+function parseIngredients(ingredientsRaw) {
+    return axios({
         method: "POST",
+        url: "https://zestful.p.rapidapi.com/parseIngredients",
         headers: {
             "x-rapidapi-host": "zestful.p.rapidapi.com",
             "x-rapidapi-key": "a1162ee7c6mshc800ab83c077685p1dfbd0jsn121aa30497f1",
@@ -21,12 +14,13 @@ function parseIngredients() {
             "ingredients": ingredientsRaw
         })
     }).then(
-        function (response) {
-            for (var i = 0; i < response.results.length; i++) {
-                console.log(response.results[i].ingredientParsed.product);
-            }
-        });
+        function (results) {
+            console.log(results.data)
+            return results.data;
+        }).catch(function (err) {
+            console.log(err);
+            throw err;
+        })
 };
 
-parseIngredients();
-
+module.exports = parseIngredients;

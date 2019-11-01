@@ -4,8 +4,15 @@
     margin: 50px auto;    
 }
 
-#slider { padding: 1.5rem; margin-right: 0; margin-left: 0; border-width: .2rem; }
-.box-center { margin: 0 auto; }
+#slider {
+	padding: 1.5rem;
+	margin-right: 0;
+	margin-left: 0;
+	border-width: 0.2rem;
+}
+.box-center {
+	margin: 0 auto;
+}
 .carousel-caption {
 	right: 0;
 	bottom: 0;
@@ -16,5 +23,7 @@
 	background: rgba(0, 0, 0, 0.45);
 }
 .carousel-item {
-	&.active .carousel-caption { opacity: 1; }
+	&.active .carousel-caption {
+		opacity: 1;
+	}
 }

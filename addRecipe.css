@@ -1,0 +1,44 @@
+#firstinput {
+    width:60%;
+    margin: auto;
+}
+#secondinput {
+    width:60%;
+    margin:auto;
+    align-content: center;
+}
+button {
+    margin:auto;
+}
+#navlist {
+    width:30%;
+}
+.title {
+    width: auto;
+    height:auto;
+    margin:2% auto;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+.title h1 {
+    font-size: 65px;
+}
+.container {
+    margin: 7% auto;
+}
+.ingredients {
+    width: 50%;
+    margin-top:-4%;
+    margin-left: 25%;
+
+}
+.instructions {
+    width: 50%;
+    margin-top:2%;
+    margin-left: 25%;
+
+}
+li {
+    font-size: 17px;
+    font-weight: 600;
+}

@@ -28,15 +28,17 @@ button {
 }
 .ingredients {
     width: 50%;
+    height: 100px;
     margin-top:-4%;
     margin-left: 25%;
-
+    overflow: auto;
 }
 .instructions {
     width: 50%;
+    height: 100px;
     margin-top:2%;
     margin-left: 25%;
-
+    overflow: auto;
 }
 li {
     font-size: 17px;

@@ -5,33 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project 2 Test Page</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+    <title>Add Recipe</title>
+    <style>
+        body {
+            background-color: #fff;
+            background-image: url("https://superoitalia.it/wp-content/uploads/2019/06/BK.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Special Elite', cursive;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="text-center">Recipe Tracker</h1>
+    <div class="title">
+        <h1>Bon Appa Feed Me!</h1>
     </div>
 
     <div class="container">
-
-        <div>
-            <div>
-                <p>Title</p>
-                <input type="text" id="recipe-title" placeholder="Recipe Title">
-                <br>
-                <p>Ingredients</p>
-                <textarea id="ingredients-list" placeholder="List of Ingredients"></textarea>
-                <p>Directions</p>
-                <textarea id="directions-text" placeholder="Recipe Directions"></textarea>
-                <button id="recipe-submit">Save Recipe</button>
+        <form>
+            <div class="form-group" id="firstinput">
+                <center><label for="exampleFormControlInput1"><strong>Recipe Name</strong></label></center>
+                <input type="text" class="form-control" id="recipeName" placeholder="Input your recipe name here...">
             </div>
-        </div>
+        
+        <br>
+        
+            <center><label for="exampleFormControlInput1"><strong>Ingredients</strong></label></center>
+            <div class="input-group mb-3" id="secondinput">
+                <input type="text" class="form-control" id="recipeIngredient" placeholder="Ingredients go here...">
+                <button type="button" class="btn btn-outline-secondary" id="addBtn">Add Ingredient</button>
+            </div>
+        
+        <br>
+        
+            <center><label for="exampleFormControlInput1"><strong>Instructions</strong></label></center>
+            <div class="input-group mb-3" id="secondinput">
+                <input type="text" class="form-control" id="recipeStep" placeholder="Your steps...">
+                <button type="button" class="btn btn-outline-secondary" id="addStepBtn">Add Step</button>
+            </div>
+        </form>
+        <br>
+        <div class="form-group" id="secondinput"></div>
+        <center>
+            <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+            <button type="button" class="btn btn-danger">View Recipes</button>
+        </center>
+        <form>
+    </div>
+    <div class="ingredients">
+        <h4>Ingredients:</h4>
+        <ul id="ingredientList">
+        </ul>
+    </div>
+    <div class="instructions">
+        <h4>Instructions:</h4>
+        <ul id="instructionList">
+        </ul>
     </div>
 
-    <script type="text/javascript" src="js/recipe.js"></script>
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+<script src="js/recipe.js"></script>
 
 </html>

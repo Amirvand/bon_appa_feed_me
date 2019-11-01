@@ -28,8 +28,15 @@ button {
 }
 .ingredients {
     width: 50%;
-    margin-top:-5%;
-    margin-left: 35%;
+    margin-top:-4%;
+    margin-left: 25%;
+
+}
+.instructions {
+    width: 50%;
+    margin-top:2%;
+    margin-left: 25%;
+
 }
 li {
     font-size: 17px;

@@ -64,12 +64,22 @@
 
     </form>
     </div>
-    <div class="ingredients">
-        <h4>Current Ingredients:</h4>
-        <ul id="ingredientList">
 
-        </ul>
-    </div>
+   
+                    <div class="ingredients">
+                            <h4>Ingredients:</h4>
+                            <ul id="ingredientList">
+                            </ul>
+                        </div>
+             
+                    <div class="instructions">
+                            <h4>Instructions:</h4>
+                            <ul id="instructionList">
+                            </ul>
+                        </div>
+              
+
+    
 
 
 
@@ -95,12 +105,13 @@
     $('#addStepBtn').click(function () {
         var instruction = $('#recipeStep').val();
         instructions.push(instruction);
-        //var newLi = $(`<li>${ingredient}</li>`);
-        //$('#ingredientList').append(newLi);
+        var newLi = $(`<li>${instruction}</li>`);
+        $('#instructionList').append(newLi);
         $('#recipeStep').val("");
 
     });
     $('#submitBtn').click(function () {
+        
         //creates object here so when you add more recipes it is not overwritten
         var recipeData = {
             title: [],
@@ -116,6 +127,10 @@
         //add title to recipe title
         recipeData.title = recipeTitle;
         //document.location.reload()
+        //If user doesn't enter title data, it stops and alerts
+        if(recipeTitle=null || recipeTitle == "") {
+            alert("Please enter valid data!");
+        } else {
         allRecipes.push(recipeData);
         console.log(allRecipes);
         //clears input forms
@@ -125,7 +140,7 @@
         recipeTitle = "";
         ingredients = [];
         instructions = [];
-
+    }
     });
 </script>
 

@@ -8,12 +8,13 @@ module.exports = function(app) {
         console.log(req.body);
 
         const dbQuery = "INSERT INTO recipes(title, ingredients, body) VALUES (?, ?, ?)";
-        // const ingredientsRaw = [];
-        // ingredientsRaw.push(req.body.ingredients);
-        // console.log(ingredientsRaw);
-        // const ingredientsJSON = await parseIngredients(ingredientsRaw);
+        const ingredientsRaw = [];
+        ingredientsRaw.push(req.body.ingredients);
+        console.log(ingredientsRaw);
+        const data = await parseIngredients(ingredientsRaw);
 
-        connection.query(dbQuery, [req.body.title, "1 cup flour", req.body.body], function(err, result) {
+        const query = connection.query(dbQuery, [req.body.title, JSON.stringify(data.results[0].ingredientParsed.product), req.body.body], function(err, result) {
+            console.log(query.sql);
             if (err) throw err;
             console.log("Recipe Successfully Saved!");
             res.end();

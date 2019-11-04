@@ -44,3 +44,9 @@ li {
     font-size: 17px;
     font-weight: 600;
 }
+.ingredients::-webkit-scrollbar {background-color:#fff;border-radius: 4px}
+.ingredients::-webkit-scrollbar-track {background-color:#fff}
+.ingredients::-webkit-scrollbar-thumb {background-color:#babac0;border-radius:4px}
+.instructions::-webkit-scrollbar {background-color:#fff;border-radius: 4px}
+.instructions::-webkit-scrollbar-track {background-color:#fff}
+.instructions::-webkit-scrollbar-thumb {background-color:#babac0;border-radius:4px}

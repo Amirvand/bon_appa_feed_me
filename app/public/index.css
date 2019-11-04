@@ -23,8 +23,11 @@ button {
 .title h1 {
     font-size: 65px;
 }
+#bontitle {
+    margin-top: -1%;
+}
 .container {
-    margin: 7% auto;
+    margin: 3% auto;
 }
 .ingredients {
     width: 50%;

@@ -32,8 +32,35 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div id="logo" class="pull-left">
+            <h1><a href="home.html" class="scrollto">Bon Appa Feed <span> Me!</span></a></h1>
+        </div>
+        <button class="navbar-toggler" id="movecontentright" type="button" data-toggle="collapse"
+            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left: 35%">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="search.html">Ingredient Finder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Recipe Browser</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="title">
-        <h1>Bon Appa Feed Me!</h1>
+        <h2 id="bontitle">Bon Appa Feed Me!</h2>
     </div>
 
     <div class="container">
@@ -42,17 +69,17 @@
                 <center><label for="exampleFormControlInput1"><strong>Recipe Name</strong></label></center>
                 <input type="text" class="form-control" id="recipeName" placeholder="Input your recipe name here...">
             </div>
-        
-        <br>
-        
+
+            <br>
+
             <center><label for="exampleFormControlInput1"><strong>Ingredients</strong></label></center>
             <div class="input-group mb-3" id="secondinput">
                 <input type="text" class="form-control" id="recipeIngredient" placeholder="Ingredients go here...">
                 <button type="button" class="btn btn-outline-secondary" id="addBtn">Add Ingredient</button>
             </div>
-        
-        <br>
-        
+
+            <br>
+
             <center><label for="exampleFormControlInput1"><strong>Instructions</strong></label></center>
             <div class="input-group mb-3" id="secondinput">
                 <input type="text" class="form-control" id="recipeStep" placeholder="Your steps...">
@@ -63,7 +90,7 @@
         <div class="form-group" id="secondinput"></div>
         <center>
             <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
-            <button type="button" class="btn btn-danger">View Recipes</button>
+            <a href='search.html'><button type="button" class="btn btn-danger">View Recipes</button></a>
         </center>
         <form>
     </div>

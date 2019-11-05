@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+    <div class="recipe-container">
+        <h1>Recipes</h1>
+        <table class="recipe-container">
+            <tbody>
+                <tr id="form-row">
+                    <form id="recipe-form">
+                        <td colspan="4">
+                            <input placeholder="Enter a title" id="recipe-title" type="text" />
+                        </td>
+                        <td colspan="4">
+                            <textarea placeholder="Enter ingredients, seperated by commas" rows="10" id="ingredient-body"></textarea>
+                        </td>
+                        <td colspan="4">
+                            <textarea placeholder="Enter directions" rows="10" id="recipe-body"></textarea>
+                        </td>
+                        <td><button type="submit">Add Recipe</button>
+                        </td>
+                    </form>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Body</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <script src="js/recipe.js" type="text/javascript"></script>
+</body>
+
+</html>

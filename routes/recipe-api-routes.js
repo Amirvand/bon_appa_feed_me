@@ -35,9 +35,9 @@ module.exports = function (app) {
     db.Ingredient.findAll({}).then(ingredient => res.json(ingredient));
   });
  
-  app.get("/api/posts/:id", function (req, res) {
+  app.get("/api/ingredients/:id", function (req, res) {
     
-    db.Ingredients.findAll({
+    db.Ingredient.findAll({
       where: {
         id: req.params.recipeId
       }

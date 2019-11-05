@@ -39,7 +39,7 @@ module.exports = function (app) {
     
     db.Ingredient.findAll({
       where: {
-        id: req.params.recipeId
+        recipeId: req.params.id
       }
     }).then(post => res.json(post));
   });

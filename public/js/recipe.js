@@ -34,7 +34,7 @@ $(document).ready(function () {
         newTr.data("recipe", recipeData);
         newTr.append("<td>" + recipeData.title + "</td>");
         newTr.append("<td>" + recipeData.body + "</td>");
-        newTr.append("<td><a href='/cms?author_id=" + recipeData.id + "'>View Recipe</a></td>");
+        newTr.append("<td><a href='api/ingredient/" + recipeData.id + "'>View Recipe</a></td>");
         return newTr;
     };
 

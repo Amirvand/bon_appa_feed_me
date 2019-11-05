@@ -5,10 +5,6 @@ module.exports = function (app) {
   app.get("/api/recipes", function (req, res) {
     db.Recipe.findAll({}).then(function (dbRecipe) {
       res.json(dbRecipe);
-    }).then(function (req, res) {
-      db.Ingredient.findAll({}).then(function (dbIngredient) {
-        res.json(dbIngredient);
-      });
     });
   });
 

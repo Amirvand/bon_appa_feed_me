@@ -5,8 +5,13 @@ module.exports = function (app) {
   app.get("/api/recipes", function (req, res) {
     db.Recipe.findAll({}).then(function (dbRecipe) {
       res.json(dbRecipe);
+    }).then(function (req, res) {
+      db.Ingredient.findAll({}).then(function (dbIngredient) {
+        res.json(dbIngredient);
+      });
     });
   });
+
 
   app.post("/api/recipes", function (req, res) {
     db.Recipe.create(req.body).then(async function (dbRecipe) {
@@ -23,7 +28,19 @@ module.exports = function (app) {
         });
       };
       res.json(dbRecipe);
-      console.log(dbIngredient)
     });
+  });
+  app.get("/api/ingredients", function (req, res) {
+    
+    db.Ingredient.findAll({}).then(ingredient => res.json(ingredient));
+  });
+ 
+  app.get("/api/posts/:id", function (req, res) {
+    
+    db.Ingredients.findAll({
+      where: {
+        id: req.params.recipeId
+      }
+    }).then(post => res.json(post));
   });
 };

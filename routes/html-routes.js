@@ -6,7 +6,7 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/recipe-manager.html"));
     });
 
-    app.get("/search", function (req, res) {
+    app.get("/", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/search.html"));
     });
 

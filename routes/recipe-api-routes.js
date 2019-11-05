@@ -41,6 +41,6 @@ module.exports = function (app) {
       where: {
         recipeId: req.params.id
       }
-    }).then(post => res.json(post));
+    }).then(ingredient => res.json(ingredient));
   });
 };
